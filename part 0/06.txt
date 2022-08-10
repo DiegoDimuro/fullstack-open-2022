@@ -1,0 +1,11 @@
+note over browser:
+When a new note is created, and submit button is clicked.
+browser first render the new note to display, and then send HTTP POST to server.
+The note is displayed to the user before it being stored in the server
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over server:
+server recives the new note in the HTTP POST as JSON data. 
+And confirms with status 201 as a response
+end note
+server->browser:201 - created
