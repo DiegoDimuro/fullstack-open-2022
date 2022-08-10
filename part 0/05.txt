@@ -1,0 +1,16 @@
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server->browser: html
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server->browser: spa.js
+note over browser:
+spa.js starts running, and eventually requests data from server
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: [{content: "just made this note!", date: "2022-08-10T00:07:40.604Z"}, ...]
+note over browser:
+browser renders the data to display
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+server->browser: favicon.ico
